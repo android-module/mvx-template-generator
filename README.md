@@ -1,5 +1,7 @@
 # mvx-template-generator
 
+基于[template]: https://github.com/JetBrains/intellij-platform-plugin-template参考[Android Studio自定义页面模板](https://juejin.cn/post/7035938545919328269#heading-3)改造的模板生成插件
+
 ![Build](https://github.com/android-module/mvx-template-generator/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
@@ -15,11 +17,7 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+适用于[github地址android-common](https://github.com/android-module/android-common)的mvx(mvp, mvvm)自动代码生成, 避免手动多个文件, 提高开发效率.
 <!-- Plugin description end -->
 
 ## Installation

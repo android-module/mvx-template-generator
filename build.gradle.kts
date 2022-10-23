@@ -20,8 +20,11 @@ version = properties("pluginVersion")
 
 // Configure project's dependencies
 repositories {
-    mavenCentral()
-}
+    maven { setUrl("https://maven.aliyun.com/repository/public")}
+    maven { setUrl("https://maven.aliyun.com/repository/google") }
+    maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+            mavenCentral()
+    }
 
 // Set the JVM language level used to compile sources and generate files - Java 11 is required since 2020.3
 kotlin {
@@ -52,6 +55,10 @@ qodana {
     reportPath.set(projectDir.resolve("build/reports/inspections").canonicalPath)
     saveReport.set(true)
     showReport.set(System.getenv("QODANA_SHOW_REPORT")?.toBoolean() ?: false)
+}
+
+dependencies {
+    compileOnly(files("libs/wizard-template.jar"))
 }
 
 tasks {
